@@ -1,4 +1,5 @@
 @import "bootstrap";
+
 /* mixins, variables, etc. */
 
 $grayMediumLight: #eaeaea;
@@ -106,8 +107,6 @@ footer {
   }
 }
 
-
-
 /* miscellaneous */
 
 .debug_dump {
@@ -117,6 +116,7 @@ footer {
   margin-top: 45px;
   @include box_sizing;
 }
+/* sidebar */
 
 aside {
   section {
@@ -144,6 +144,36 @@ aside {
 .gravatar {
   float: left;
   margin-right: 10px;
+}
+
+
+.stats {
+  overflow: auto;
+  a {
+    float: left;
+    padding: 0 10px;
+    border-left: 1px solid $grayLighter;
+    color: gray;
+    &:first-child {
+      padding-left: 0;
+      border: 0;
+    }
+    &:hover {
+      text-decoration: none;
+      color: $blue;
+    }
+  }
+  strong {
+    display: block;
+  }
+}
+
+.user_avatars {
+  overflow: auto;
+  margin-top: 10px;
+  .gravatar {
+    margin: 1px 1px;
+  }
 }
 
 /* forms */
@@ -213,37 +243,5 @@ aside {
   textarea {
     height: 100px;
     margin-bottom: 5px;
-  }
-}
-
-/* sidebar */
-
-
-.stats {
-  overflow: auto;
-  a {
-    float: left;
-    padding: 0 10px;
-    border-left: 1px solid $grayLighter;
-    color: gray;
-    &:first-child {
-      padding-left: 0;
-      border: 0;
-    }
-    &:hover {
-      text-decoration: none;
-      color: $blue;
-    }
-  }
-  strong {
-    display: block;
-  }
-}
-
-.user_avatars {
-  overflow: auto;
-  margin-top: 10px;
-  .gravatar {
-    margin: 1px 1px;
   }
 }
